@@ -1,8 +1,8 @@
 
     <div ng-controller="slidCntrl as s">
 
-        <div>
-            <img ng-repeat="slide in slides" class="slide" ng-show="isCurrentSlideIndex($index)" ng-src="{{slide.image}}" width="960" height="300">
+        <div class="slideshow">
+            <img ng-repeat="slide in slides" class="slide" ng-show="isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
         </div>
 
         <input type="button" value="NEXT" ng-click="nextSlide()"/>

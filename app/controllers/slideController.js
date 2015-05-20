@@ -34,4 +34,6 @@
             return $scope.currentIndex === index;
         };
     }
+
+
 })()

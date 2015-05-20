@@ -1,4 +1,9 @@
-
+.slideshow img{
+    width:96%;
+    height:340px;
+    margin-right: auto;
+    margin-left: 2%;
+}
 
 .nav1 {
     text-align: center;
