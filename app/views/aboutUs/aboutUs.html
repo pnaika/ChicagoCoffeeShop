@@ -5,8 +5,10 @@
             <img ng-repeat="slide in slides" class="slide" ng-show="isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
         </div>
 
-        <input type="button" value="NEXT" ng-click="nextSlide()"/>
-        <input type="button" value="Previous" ng-click="prevSlide()"/>
+        <div class="button">
+            <input class="btn btn-default" id="prev" type="button" value="Previous" ng-click="nextSlide()"/>
+            <input class="btn btn-default" id="next"  type="button" value="Next" ng-click="prevSlide()"/>
+        </div>
 
         <nav class="nav1">
         <div>
