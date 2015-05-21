@@ -45,6 +45,4 @@
         console.log('slide Controller');
     }
 
-
-
-})()
+})();

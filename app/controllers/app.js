@@ -3,11 +3,9 @@
  */
 
 (function(){
-
     angular.module('myApp',['ngRoute','ngMessages','ngAnimate','ngResource']);
-
+    
     angular.module('myApp').config(moduleConfig);
-
     function moduleConfig($routeProvider) {
         $routeProvider
             .when('/aboutUs', {

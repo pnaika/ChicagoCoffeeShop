@@ -1,17 +1,17 @@
-<div class="empSub" ng-show="empSelected">
-    <h1>More Staff Information</h1>
-    <p>Staff Id : {{ empSelected.employeeId }}</p>
-    <p>Name : {{ empSelected.employeeName }}</p>
-    <p>EMail : {{ empSelected.employeeEmail }}</p>
-    <p>Phone : {{ empSelected.employeePhone }}</p>
-    <p>Address : {{ empSelected.employeeAddress }}</p>
+
+<div  ng-controller="empDetails as e">
+<div class="empSub" ng-show="e.empSelected">
+    <h2>More Staff Information</h2>
+    <p>Staff Id : {{ e.empSelected.employeeId }}</p>
+    <p>Name : {{ e.empSelected.employeeName }}</p>
+    <p>EMail : {{ e.empSelected.employeeEmail }}</p>
+    <p>Phone : {{ e.empSelected.employeePhone }}</p>
+    <p>Address : {{ e.empSelected.employeeAddress }}</p>
 </div>
-<div class="empSub" ng-hide="empSelected">
+<div class="empSub" ng-hide="e.empSelected">
     <p>Click on employee details for more information</p>
 </div>
-
-
- 
+    <br><br>
 <div class="empTable">
     <table border="1" class="table">
     <thead>
@@ -22,13 +22,14 @@
     </thead>
     <tbody>
         <tr ng-repeat="emp in allemployees"
-            ng-click="empSelected = emp"
-            ng-class="{true: 'active',false: ''}[empSelected == emp]"
-            >
+            ng-click="e.empSelected = emp"
+            ng-class="{true:'active',false:''}[e.empSelected == emp]">
             <td>{{ emp.employeeId }}</td>
             <td>{{ emp.employeeName }}</td>
         </tr>
     </tbody>
     </table>
-{{ empSelected.employeeId }}
+     <br><br> <br><br>
+     <section><p>Contact Us ,If you have any Questionary !!!</p></section>
+</div>
 </div>

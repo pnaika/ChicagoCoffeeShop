@@ -7,6 +7,5 @@
         $scope.allemployees = employees.query();
 
         console.log('employee controller');
-    });
- 
+    }); 
 })();
