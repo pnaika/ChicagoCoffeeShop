@@ -11,7 +11,7 @@
 </div>
 
 
-{{ empSelected.employeeId }} 
+ 
 <div class="empTable">
     <table border="1" class="table">
     <thead>
@@ -23,11 +23,12 @@
     <tbody>
         <tr ng-repeat="emp in allemployees"
             ng-click="empSelected = emp"
-            ng-class="{true: 'active',false: ''}"
+            ng-class="{true: 'active',false: ''}[empSelected == emp]"
             >
             <td>{{ emp.employeeId }}</td>
             <td>{{ emp.employeeName }}</td>
         </tr>
     </tbody>
-</table>
+    </table>
+{{ empSelected.employeeId }}
 </div>

@@ -215,3 +215,21 @@ h2{
         font-size: smaller;
     }
 }
+
+.empTable table{
+    width: 55%;
+    font-size: larger;
+}
+.empTable tbody tr:active,tr:hover{
+    cursor: pointer;
+    color: white;
+    background-color: steelblue;
+}
+.empSub{
+    float: left;
+    width: 30%;
+    position: fixed;
+    margin-left:49%;
+    color: white;
+    font-size: larger;
+}

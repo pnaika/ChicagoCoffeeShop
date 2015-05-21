@@ -12,13 +12,13 @@
 
         <nav class="nav1">
         <div>
-            <ul class="dots">
+            <ol class="dots">
                 <li class="dot" ng-repeat="slide in slides">
                    <a href="#/aboutUs" ng-class="{'active':isCurrentSlideIndex($index)}"
-                       ng-click="setCurrentSlideIndex($index);">{{slide.description}}
+                       ng-click="setCurrentSlideIndex($index);">{{slides.description}}
                    </a>
                 </li>
-            </ul>
+            </ol>
         </div>
         </nav>
     </div>
