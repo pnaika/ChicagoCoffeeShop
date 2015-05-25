@@ -11,30 +11,90 @@
     <div id="map-canvas">
     </div>
 
-    <form id="resForm" onsubmit="return FormValidationContact()" name="formassign4" method="post">
+    <form id="resForm" name="contactForm" novalidate method="post">
         <fieldset>
             <div class="form-group">
                 <label for="firstname">First Name</label>
-                <input name="fname" type="email" class="form-control" id="firstname" placeholder="Enter First Name">
+                <input name="fname" 
+                       ng-model="user.username" 
+                       type="text" 
+                       class="form-control" 
+                       id="firstname" 
+                       placeholder="Enter First Name"
+                       required
+                       data-ng-minlength="2"
+                       data-ng-maxlength="16"/>
+            <div class="error" ng-messages="contactForm.fname.$error" ng-if="contactForm.fname.$dirty">
+                <p ng-message="required">First name is Required!</p>
+                <p ng-message="minlength">Min length is 2!</p>
+                <p ng-message="maxlength">Max length is 16!</p>
+            </div>
             </div>
             <div class="form-group">
                 <label for="lastname">Last Name</label>
-                <input name="lname" type="password" class="form-control" id="lastname" placeholder="Enter First Name">
+                <input name="lname" 
+                       ng-model="user.lastname" 
+                       type="text" 
+                       class="form-control" 
+                       id="lastname" 
+                       placeholder="Enter Last Name"
+                       required
+                       data-ng-minlength="2"
+                       data-ng-maxlength="10"/>
+            <div class="error" ng-messages="contactForm.lname.$error" ng-if="contactForm.lname.$dirty">
+                <p ng-message="required">last name is Required!</p>
+                <p ng-message="minlength">Min length is 2!</p>
+                <p ng-message="maxlength">Max length is 10!</p>
+            </div>
+            
+            
             </div>
             <div class="form-group">
                 <label for="telnum">Contact Number</label>
-                <input name="phone" type="tel" class="form-control" id="telnum" placeholder="Phone Number">
+                <input name="phone" 
+                       type="tel"  
+                       ng-model="user.phone" 
+                       class="form-control" 
+                       id="telnum" 
+                       placeholder="Phone Number"
+                       required/>
+            <div class="error" ng-messages="contactForm.phone.$error" ng-if="contactForm.phone.$dirty">
+                <p ng-message="required">please enter phone number!</p>
+            </div>
             </div>
             <div class="form-group">
                 <label for="email">Email ID</label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="Email ID">
+                <input name="email" 
+                       type="email" 
+                       ng-model="user.email" 
+                       class="form-control" 
+                       id="email" 
+                       placeholder="Email ID"
+                       required/>
+            <div class="error" ng-messages="contactForm.email.$error" ng-if="contactForm.email.$dirty">
+                <p ng-message="required">please enter email ID!</p>
+                <p ng-message="email">email ID is Invalid!</p>
+            </div>
             </div>
             <div class="form-group">
-                <textarea name="description" class="form-control" rows="5" placeholder="Your requirements go here ...."></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+                <textarea name="description" 
+                          ng-model="user.description" 
+                          class="form-control" 
+                          rows="5" 
+                          placeholder="Your requirements go here ...."
+                          required/>
+                </textarea>
+                <div class="error" ng-messages="contactForm.description.$error" ng-if="contactForm.description.$dirty">
+                    <p ng-message="required">Give Us more Information!</p>
+                </div>
+            </div>           
+            <button class="btn btn-default" ng-click="ContactController()">Submit</button>
             <button type="reset" class="btn btn-default">Start Over</button>
         </fieldset>
     </form>
+    
+    <div class="alert" ng-show="alerts">
+           {{ alerts.msg }}
+    </div>
 </article>
 </div>

@@ -3,10 +3,10 @@
  */
 
 (function(){
-    angular.module('myApp',['ngRoute','ngMessages','ngAnimate','ngResource']);
+    angular.module('myApp',['ngRoute','ngMessages','ngAnimate','ngResource','ui.bootstrap']);
     
     angular.module('myApp').config(moduleConfig);
-    function moduleConfig($routeProvider) {
+    function moduleConfig($routeProvider) { 
         $routeProvider
             .when('/aboutUs', {
                 templateUrl: 'views/aboutUs/aboutUs.html',
@@ -44,6 +44,11 @@
           query: {
               method:'GET', isArray:true 
           } 
+       }); 
+    });
+    
+    angular.module('myApp').factory('addCustomer',function($resource){
+       return $resource('http://localhost:8080/ChicagoCoffeeShopBackEnd/chicagoCoffeeShop/users',{},{ 
        }); 
     });
       
