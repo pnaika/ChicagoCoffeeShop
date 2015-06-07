@@ -1,0 +1,42 @@
+
+    <div ng-controller="slidCntrl as s">
+
+        <div class="slideshow">
+            <img ng-repeat="slide in slides" class="slide" ng-show="isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        </div>
+
+        <div class="button">
+            <input class="btn btn-default" id="prev" type="button" value="Previous" ng-click="nextSlide()"/>
+            <input class="btn btn-default" id="next"  type="button" value="Next" ng-click="prevSlide()"/>
+        </div>
+
+        <nav class="nav1">
+        <div>
+            <ol class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                   <a href="#/aboutUs" ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slides.description}}
+                   </a>
+                </li>
+            </ol>
+        </div>
+        </nav>
+    </div>
+    <br>
+    <div class="sectn">
+        <article>
+            <section>
+                We'll admit if it wasn't for a hearty cappuccino every morning we don't know how we would have gotten through this winter. There's something about the smell and taste of coffee and the warmth of a hot cup in our hands that is reassuring whenever nature decides to prank the city with another five inches of snow !!!!
+            </section>
+            <br>
+            <section>
+                <br>
+                <img src="images/b3000se.jpg" id="product">
+                <br>
+                <br>
+                The <strong>B3000/B3000SE</strong> Large Office Brewing System, the largest most advanced brewing system, is packed with features. The <strong>B3000/B3000SE</strong> is the way large offices make the coffee you, your office and your customers will love.
+            </section>
+            <hr>
+        </article>
+    </div>
+

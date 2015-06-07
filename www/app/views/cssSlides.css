@@ -1,0 +1,126 @@
+.slideshow img{
+    width:96%;
+    height:340px;
+    margin-right: auto;
+    margin-left: 2%;
+}
+.slideshowGal img{
+    width:100%;
+    height:500px;
+}
+.nav1 {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: 600px;
+    right: 0;
+    height: 48px;
+}
+
+.nav1 ul {
+    margin: 0;
+    width: 100%;
+}
+
+.nav1 .dot, .nav1 .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+.dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.dots .dot a.active {
+    border-color: #FFF;
+    background-color: transparent;
+}
+.button{
+    text-align: center;
+    z-index:1002;
+    position:absolute;
+    float: left;
+    bottom: 800px;
+    width:78%;
+}
+@media (max-width: 1000px){
+    .button{
+        width:85%
+    }
+}
+@media (max-width: 750px){
+    .button{
+        width:80%
+    }
+}
+
+.button #prev{
+    float: left;
+}
+.button #next{
+    margin-right: -86%;
+}
+
+.nav2 {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    height: 48px;
+}
+
+.nav2 ul {
+    margin: 0;
+    width: 100%;
+}
+
+.nav2 .dot, .nav1 .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.buttonGal{
+    text-align: center;
+    z-index:1002;
+    position:absolute;
+    float: left;
+    bottom: 300px;
+    width:78%;
+}
+.buttonGal #prev{
+    float: left;
+}
+.buttonGal #next{
+    margin-right: -86%;
+}
